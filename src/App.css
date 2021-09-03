@@ -1,0 +1,164 @@
+* {
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #555a74;
+}
+
+.movie {
+  width: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px; 
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: rgb(83, 83, 83);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+.App{
+  text-align: center;
+  color:crimson;
+  margin-top: 10px;
+  padding-top: 4px;
+
+}
+.image {
+  height : 300px;
+  width: 300px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 2s ease-in-out;
+  backface-visibility: hidden;
+}
+
+.title {
+  color: whitesmoke;
+  height: 10px;
+
+
+}
+
+.Add {
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+.btn-add {
+  height: 200px;
+  width: 150px;
+  background-color: transparent;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rate {
+  display:flex;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.description {
+  padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;  
+  right: 0;
+  background-color: seashell;
+  color: black;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow: auto;
+  max-height: 100%;
+}
+
+.movie:hover .description {
+  transform: translateY(0%);
+} 
+.star-btn{
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+  width: 110px;  
+  height: 60px;
+
+}
+.btn-add span{
+ color: brown;
+  text-align: center;
+  font-size: large;
+
+
+}
+.Movielist{
+  
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+}
+
+.btnadd{
+  border-radius: 4px;
+  color: red;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;  
+}
+.inputAdd {
+  height: 50px;
+  width: 300px;
+  text-align: center;
+  font-weight: bolder ;
+  font-size: 20px;
+  border: 2px solid red;
+  border-radius: 4px;
+  color: rgb(10, 8, 8);
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.fas fa-star{
+  color: yellow;
+}
+.rate {
+  display:flex;
+  margin-top: 3px;
+  margin-bottom: 9px;
+  
+  height: 30px;
+  width: 40px;
+}
+
+/*.modalform{
+  display: flex;
+  justify-content: center;
+
+}*/
+/*.movie:hover .image.front{
+  transform: perspective(5009px)rotateY(180deg);
+}
+
+
+.movie .back{
+  transform: perspective(5009px)rotateY(180deg);
+  
+
+}
+.movie:hover .image .back{
+  transform: perspective(5009px)rotateY(180deg);
+}*/
