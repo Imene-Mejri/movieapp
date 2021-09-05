@@ -3,16 +3,17 @@ import './App.css';
 
 import Movieslist from './components/Movieslist';
 import Search from './components/search';
-import {useState} from 'react';
+import { useState } from 'react';
+import Rating from './components/rating'
 
 
 function App() {
-  const [movies,setmovies] = useState([{
+  const [movies, setmovies] = useState([{
     id: Math.random(),
     title: "ETERNEL",
     rate: 2,
     img1: "./images/pic1.jpg",
-   /* img2: './images/pic1back.jpeg',*/
+    /* img2: './images/pic1back.jpeg',*/
 
     description: "Movies coming in 2021 from Netflix, Marvel, HBO and more - CNET"
   },
@@ -38,7 +39,7 @@ function App() {
     title: "Mission impossible",
     rate: 2,
     img1
-    : './images/pic4_.jpg',
+      : './images/pic4_.jpg',
 
     description: "Ethan Hunt and his IMF team, along with some familiar allies, race against time after a mission gone wrong."
   },
@@ -62,22 +63,24 @@ function App() {
 
 
   ]);
-  const [search,setSearch]=useState('');
-  //const [rating, setRating] = useState("");
+  const [search, setSearch] = useState('');
+  const [rating, setRating] = useState("");
 
-  const addhandler=(newmovie)=>{
+  const addhandler = (newmovie) => {
 
-   setmovies(
-    [...movies,newmovie])
+    setmovies(
+      [...movies, newmovie])
   }
 
   return (
     <div className="App">
-      <Search  setsearch={setSearch} //setRating={setRating}//
+      <Search setsearch={setSearch}
       />
-      <h1>Movie App</h1>
-      <Movieslist movies={movies} search={search} addhandler={addhandler} //rating={rating} //
-       />
+      
+      <h1>Movie App</h1>  <Rating setRating={setRating} />
+     
+      <Movieslist movies={movies} search={search} addhandler={addhandler} rating={rating}
+      />
       
 
     </div>

@@ -2,7 +2,7 @@
 
 
 
-/*import React from 'react'
+import React from 'react'
 
 export default function rating({ setRating }) {
     const stars = Array(5).fill(<i className="fas fa-star"></i>)
@@ -12,6 +12,6 @@ export default function rating({ setRating }) {
 
         </div>
     )
-}*/
+}
 
 

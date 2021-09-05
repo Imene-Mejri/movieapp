@@ -2,10 +2,10 @@ import React from 'react';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, Nav, Form, FormControl } from 'react-bootstrap';
-//import Rating from './rating'
 
 
-export default function Search({setsearch ,setRating }) {
+
+export default function Search({setsearch }) {
     return (
         <div>
             <form className='form'>
@@ -28,7 +28,7 @@ export default function Search({setsearch ,setRating }) {
                                 aria-label="Search"
                                 onChange={(e)=>setsearch(e.target.value)}
                             />
-                             {/* <Rating  setRating={setRating} style={{width:'200px', marginLeft:'20px'}} />*/}
+                             
                           
                         </Form>
                     </Navbar.Collapse>

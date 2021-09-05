@@ -5,7 +5,7 @@ import Add from './Add';
 
 
 
-function Movieslist({ movies,search,addhandler,/*rating*/ } ) {
+function Movieslist({ movies,search,addhandler,rating } ) {
     console.log(search)
 
 
@@ -15,7 +15,7 @@ function Movieslist({ movies,search,addhandler,/*rating*/ } ) {
             <div className='Movielist' >
             { 
                 movies
-                .filter(el=> el.title.toLowerCase().includes(search.toLowerCase().trim()) //>rating // 
+                .filter(el=> el.title.toLowerCase().includes(search.toLowerCase().trim()) && el.rate >= rating  
                 )
                 .map(el => <Movie film={el} />)
             }

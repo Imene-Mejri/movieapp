@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { useState } from 'react';
+Modal.setAppElement('#root');
 
 export default function Add({addhandler }) {
 
@@ -25,12 +26,13 @@ export default function Add({addhandler }) {
       img1: img,
       description: description
     });
-
+  
 
     }
     return (
         <div className='Add'>
             <button onClick={toggle} className='btn-add' ><i class="fas fa-plus-square"></i></button>
+         
             <Modal isOpen={show}>
                 <form className='modalform'>
                     <h1>Add new movie</h1>
