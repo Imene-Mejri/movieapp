@@ -18,7 +18,8 @@ export default function Add({addhandler }) {
 
 
     
-  const addfilm = () => {
+  const addfilm = (e) => {
+      e.preventDefault()
     addhandler ({
       id: Math.random(),
       title: title,
@@ -71,7 +72,7 @@ export default function Add({addhandler }) {
                     <br />
                     <div className='btnadd'>
                         <button className='Addbutton' onClick={toggle}>Close</button>
-                        <button onClick={addfilm}>Addmovie</button>
+                        <button  onClick={addfilm}>Addmovie</button>
                     </div>
                 </form>
             </Modal>
