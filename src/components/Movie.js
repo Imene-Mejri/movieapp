@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+
 
 export default function Movie({ film }) {
 
@@ -11,11 +13,11 @@ export default function Movie({ film }) {
     return (
         <div className='movie'>
            <div className='front'>
-            <img className="image" src={film.img1} />
+           <Link to={`/Trailer/:${film.id}`}> Vieuw more </Link> 
+           <img className="image" src={film.img1} />
             </div>
             <div className='back'>
-            {/*<img className="image" src={film.img2} />*/}
-            </div>
+           </div>
             <h3 className="title">{film.title}</h3>
             <br/>
             <div className='star-btn'>
