@@ -13,7 +13,7 @@ export default function Movie({ film }) {
     return (
         <div className='movie'>
            <div className='front'>
-           <Link to={`/Trailer/:${film.id}`}> Vieuw more </Link> 
+           <Link to={`/Trailer/${film.id}`}> Vieuw more </Link> 
            <img className="image" src={film.img1} />
             </div>
             <div className='back'>

@@ -3,6 +3,7 @@ import { Link ,  useParams} from "react-router-dom";
 
 
 export default function Trailer({movies}) {
+    console.log(movies)
    
     const {ID}=useParams();
     return (
@@ -13,23 +14,23 @@ export default function Trailer({movies}) {
               
               
             
-              {
+               {/* {
               movies.filter(el => el.id == ID).map((movies,index)=>(
                   <div key={index} className='information'>
                       <h1>{movies.title}</h1>
                       <p>{movies.decrcription}</p>
                       <span>{movies.watch}</span>
 
-                  </div>
+                  </div> */}
               ))
-           /* <div className='TrailerImg'>
-                <img src={(film.find(film=>film.id==ID)).img}/>
+           <div className='TrailerImg'>
+                <img src={(movies.find(movie=>movie.id==ID)).img1}/>
             </div>
             <div className='TrailerDetails'>
-                <h2>{(film.find(el=> el.id==ID)).title}</h2>
-                <p >{(film.find(el=> el.id==ID)).description}</p>
-                <span>{(film.find(el=> el.id==ID)).watch}</span>
-            </div>   */}
+                <h2>{(movies.find(movie=> movie.id==ID)).title}</h2>
+                <p >{(movies.find(movie=> movie.id==ID)).description}</p>
+                <span>{(movies.find(movie=> movie.id==ID)).watch}</span>
+            </div>  
 
               </div>
               

@@ -1,6 +1,6 @@
 
 import './App.css';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import Movieslist from './components/Movieslist';
 import Search from './components/search';
@@ -132,14 +132,15 @@ function App() {
           <Movieslist movies={movies} search={search} addhandler={addhandler} rating={rating} />
 
         </Route>
-
-        <Route path='/Trailer/:ID' />
+        <Route path="/Trailer/:ID">
+        
             <Trailer movies={movies} />
-      
-      </Router>
+     
+          </Route>
 
-
+            </Router>
     </div>
+     
   );
 }
 
