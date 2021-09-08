@@ -13,7 +13,7 @@ export default function Movie({ film }) {
     return (
         <div className='movie'>
            <div className='front'>
-           <Link to={`/Trailer/${film.id}`}> Vieuw more </Link> 
+           <Link to={`/Trailer/${film.id}`}> View more </Link> 
            <img className="image" src={film.img1} />
             </div>
             <div className='back'>
@@ -23,8 +23,8 @@ export default function Movie({ film }) {
             <div className='star-btn'>
                 {rate.fill(<i class="fas fa-star"></i>).concat(rest.fill(<i class="far fa-star"></i>))}
             </div>
-            <br/>
-            <p className="description">{film.description}</p>
+            <br/>{/* 
+            <p className="description">{film.description}</p> */}
         </div>
     );
 };
